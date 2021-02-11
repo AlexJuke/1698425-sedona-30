@@ -1,94 +1,103 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon.ico">
-  <link rel="icon" href="/img/logo/icons/favicon_32.svg" type="image/svg+xml">
+  <link rel="icon" href="img/icons/favicon_32.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/img/logo/icons/180.png" type="image/svg+xml">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-  <header>
-    <a href="index.html">
+<body class="page-body">
+  <header class="main-header">
+    <a class="main-logo" href="#">
       <img src="/img/logo/logo.svg" width="138" height="70" alt="Логотип Седона">
     </a>
-    <nav>
-      <ul>
-        <li><a href="blank.html">Информация</a></li>
-        <li><a href="blank.html">Фото и видео</a></li>
-        <li><a href="blank.html">Карта</a></li>
-        <li><a href="catalog.html">Гостиницы</a></li>
+    <nav class="site-navigation">
+      <ul class="site-navigation-list">
+        <li><a class="site-navigation-link" href="blank.html">Информация</a></li>
+        <li><a class="site-navigation-link" href="blank.html">Фото и видео</a></li>
+        <li><a class="site-navigation-link" href="blank.html">Карта</a></li>
+        <li><a class="site-navigation-link" href="catalog.html">Гостиницы</a></li>
       </ul>
     </nav>
   </header>
 
+
   <main>
-    <section>
-      <h2>Форма поиска</h2>
+    <section class="search-form-container">
+      <h2 class="hidden-header">Форма поиска</h2>
       <form action="https://echo.htmlacademy.ru/" method="POST">
-
-        <h3>Инфраструктура:</h3>
-        <ul>
-          <li>
-            <label for="pool">Бассейн</label>
-            <input id="pool" type="checkbox" checked>
-          </li>
-          <li>
-            <label for="parking">Парковка</label>
-            <input id="parking" type="checkbox">
-          </li>
-          <li>
-            <label for="wifi">wifi</label>
-            <input id="wifi" type="checkbox">
-          </li>
-        </ul>
-
-        <h3>Тип жилья:</h3>
-        <ul>
-          <li>
-            <label for="hotel">Гостиница</label>
-            <input id="hotel" type="checkbox" checked>
-          </li>
-          <li>
-            <label for="motel">Мотель</label>
-            <input id="motel" type="checkbox" checked>
-          </li>
-          <li>
-            <label for="apartment">Апартаменты</label>
-            <input id="apartment" type="checkbox" checked>
-          </li>
-        </ul>
-
-        <h3>Стоимость в сутки (Р):</h3>
-        <label>
-          от
-          <input type="text" placeholder="0" name="min-price">
-        </label>
-        <label>
-          до
-          <input type="text" placeholder="3000" name="max-price">
-        </label>
-        <button type="submit">Показать</button>
+        <div class="search-form">
+          <h3 class="search-form-header">Инфраструктура:</h3>
+          <ul class="search-form-items">
+            <li>
+              <label for="pool">Бассейн</label>
+              <input id="pool" type="checkbox" checked>
+            </li>
+            <li>
+              <label for="parking">Парковка</label>
+              <input id="parking" type="checkbox">
+            </li>
+            <li>
+              <label for="wifi">wifi</label>
+              <input id="wifi" type="checkbox">
+            </li>
+          </ul>
+        </div>
+        <div class="search-form">
+          <h3 class="search-form-header">Тип жилья:</h3>
+          <ul class="search-form-items">
+            <li>
+              <label for="hotel">Гостиница</label>
+              <input id="hotel" type="checkbox" checked>
+            </li>
+            <li>
+              <label for="motel">Мотель</label>
+              <input id="motel" type="checkbox" checked>
+            </li>
+            <li>
+              <label for="apartment">Апартаменты</label>
+              <input id="apartment" type="checkbox" checked>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="search-form-header">Стоимость в сутки (Р):</h3>
+          <label>
+            от
+            <input type="text" placeholder="0" name="min-price">
+          </label>
+          <label>
+            до
+            <input type="text" placeholder="3000" name="max-price">
+          </label>
+          <button type="submit">Показать</button>
+        </div>
       </form>
     </section>
 
     <section>
-      <h2>Результат поиска поиска</h2>
-      <div>
-        <span>Найдено: 3</span>
-        <h3>Сортировка:</h3>
-        <ul>
-          <li><a href="blank.html">По цене</a></li>
-          <li><a href="blank.html">По типу</a></li>
-          <li><a href="blank.html">По рейтингу</a></li>
-        </ul>
-        <ul>
-          <li><a href="blank.html">По убыванию</a></li>
-          <li><a href="blank.html">По возрастанию</a></li>
-        </ul>
+      <div class="search-result">
+        <h2 class="hidden-header">Результат поиска</h2>
+        <div>
+          <span>Найдено: 3</span>
+          <h3>Сортировка:</h3>
+          <ul>
+            <li><a href="blank.html">По цене</a></li>
+            <li><a href="blank.html">По типу</a></li>
+            <li><a href="blank.html">По рейтингу</a></li>
+          </ul>
+          <ul>
+            <li><a href="blank.html">По убыванию</a></li>
+            <li><a href="blank.html">По возрастанию</a></li>
+          </ul>
+        </div>
       </div>
 
       <ul>
@@ -133,25 +142,23 @@
       </ul>
     </section>
   </main>
-  <footer>
-    <div>
-      <span>Как нас найти</span>
+
+  <footer class="main-footer">
+    <div class="footer-contacts">
+      <h2 class="hidden-header">Как нас найти</h2>
       <span>#visitsedona</span>
-      <a href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
+      <a class="footer-contacts-phone" href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
     </div>
     <div>
-      <ul>
-        <li><a href="https://twitter.com"></a></li>
-        <li><a href="https://facebook.com"></a>
-        </li>
-        <li><a href="https://youtube.com"></a></li>
+      <ul class="socials">
+        <li><a class="socials-button twitter" href="https://twitter.com"></a></li>
+        <li><a class="socials-button facebook" href="https://facebook.com"></a></li>
+        <li><a class="socials-button youtube" href="https://youtube.com"></a></li>
       </ul>
     </div>
-    <div>
-      <a href="https://htmlacademy.ru/intensive/htmlcss">
-        <img src="/img/logo/logo-htmlacademy.svg" width="197" height="41"
-          alt="https://htmlacademy.ru/intensive/htmlcss">
-      </a>
+    <div class="footer-copyright">
+      <span>Website by</span>
+      <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss"></a>
     </div>
   </footer>
 </body>

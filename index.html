@@ -13,28 +13,28 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="page-body">
   <header class="main-header">
     <a class="main-logo" href="#">
       <img src="/img/logo/logo.svg" width="138" height="70" alt="Логотип Седона">
     </a>
     <nav class="site-navigation">
       <ul class="site-navigation-list">
-        <li><a href="blank.html">Информация</a></li>
-        <li><a href="blank.html">Фото и видео</a></lis=>
-        <li><a href="blank.html">Карта</a></li>
-        <li><a href="catalog.html">Гостиницы</a></liass=>
+        <li><a class="site-navigation-link" href="blank.html">Информация</a></li>
+        <li><a class="site-navigation-link" href="blank.html">Фото и видео</a></li>
+        <li><a class="site-navigation-link" href="blank.html">Карта</a></li>
+        <li><a class="site-navigation-link" href="catalog.html">Гостиницы</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="header">
-      <h1>Сайт городка Седона</h1>
-      <img class="header-logo" src="/img/logo/welcome.svg" width="457" height="350" alt="Добро пожаловать в Седону">
+    <section class="header-logo">
+      <h1 class="hidden-header">Сайт городка Седона</h1>
+      <img class="header-logo-img" src="/img/logo/welcome.svg" width="457" height="350" alt="Добро пожаловать в Седону">
     </section>
     <section class="features">
-      <h2>Преимущества</h2>
+      <h2 class="hidden-header">Преимущества</h2>
       <p class="features-header">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
       <p class="features-desc">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       <div class="features-item">
@@ -92,21 +92,20 @@
     </section>
 
     <section class="housing-search">
-      <div>
-        <h2>Поиск гостиницы в Седоне</h2>
+      <div class="housing-search-block">
+        <h2 class="hidden-header">Поиск гостиницы в Седоне</h2>
         <span class="search-header">Заинтересовались?</span>
         <p class="search-dates">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в
           седоне</p>
         <a class="search-link" href="blank.html">Поиск гостиницы в Седоне</a>
       </div>
-      <form class="search-form" action="https://echo.htmlacademy.ru/courses" method="post"
-        enctype="multipart/form-data">
+      <form action="https://echo.htmlacademy.ru/courses" method="post" enctype="multipart/form-data">
         <div class="search-option">
           <label>
             Дата заезда:
             <input class="search-option input-date" type="text" placeholder="24 апреля 2017" name="check-in date">
           </label>
-          <button class="search-option calendar" type="button">Календарь</button>
+          <button class="search-option calendar-button" type="button" name="calendar"></button>
         </div>
 
         <div class="search-option">
@@ -114,7 +113,7 @@
             Дата выезда:
             <input class="search-option input-date" type="text" placeholder="4 июля 2017" name="check-out date">
           </label>
-          <button class="search-option calendar" type="button">Календарь</buttons=>
+          <button class="search-option calendar-button" type="button" name="calendar"></button>
         </div>
 
         <div class="search-option">
@@ -122,8 +121,8 @@
             Взрослые:
             <input class="search-option input-count" type="text" placeholder="2" name="adult">
           </label>
-          <button class="search-option count-button" type="button">+</button>
-          <button class="search-option count-button" type="button">-</button>
+          <button class="search-option count-button minus" type="button" name="minus"></button>
+          <button class="search-option count-button plus" type="button" name="plus"></button>
         </div>
 
         <div class="search-option">
@@ -131,14 +130,14 @@
             Дети:
             <input class="search-option input-count" type="text" placeholder="0" name="children">
           </label>
-          <button class="search-option count-button" type=button>+</button>
-          <button class="search-option count-button" type="button">-</button>
+          <button class="search-option count-button minus" type="button" name="minus"></button>
+          <button class="search-option count-button plus" type=button name="plus"></button>
         </div>
-        <button class="search-button" type="submit">Найти</button>
+        <button class="search-button" type="submit"><span>Найти</span></button>
       </form>
 
       <div class="map-wrapper">
-        <h2>Карта</h2>
+        <h2 class="hidden-header">Карта</h2>
         <img src="/img/map.png" width="1199" height="594" alt="#visitsedona">
       </div>
     </section>
@@ -146,22 +145,20 @@
 
   <footer class="main-footer">
     <div class="footer-contacts">
-      <h2>Как нас найти</h2>
+      <h2 class="hidden-header">Как нас найти</h2>
       <span>#visitsedona</span>
-      <a href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
+      <a class="footer-contacts-phone" href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
     </div>
-    <div class="socials">
-      <ul>
-        <li class="socials-icon"><img src="img/icons/twitter-icon.svg" width="17" height="17"><a href="https://twitter.com"></a></li>
-        <li class="socials-icon"><img src="img/icons/fb-icon.svg" width="12" height="22"><a href="https://facebook.com"></a></li>
-        <li class="socials-icon"><img src="img/icons/youtube-icon.svg" width="26" height="16"><a href="https://youtube.com"></a></li>
+    <div>
+      <ul class="socials">
+        <li><a class="socials-button twitter" href="https://twitter.com"></a></li>
+        <li><a class="socials-button facebook" href="https://facebook.com"></a></li>
+        <li><a class="socials-button youtube" href="https://youtube.com"></a></li>
       </ul>
     </div>
     <div class="footer-copyright">
-      <a href="https://htmlacademy.ru/intensive/htmlcss">
-        <img src="/img/logo/logo-htmlacademy.svg" width="197" height="41"
-          alt="https://htmlacademy.ru/intensive/htmlcss">
-      </a>
+      <span>Website by</span>
+      <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss"></a>
     </div>
   </footer>
 </body>
