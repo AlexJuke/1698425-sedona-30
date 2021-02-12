@@ -6,6 +6,7 @@
   --basic-dark:  #666666;
   --basic-neutral: #888888;
   --basic-white: #ffffff;
+  --basic-white-03: rgba(255, 255, 255, 0.3);
   --basic-extra-blue: #23A9E1;
   --basic-blue: #81B3D2;
 
@@ -26,26 +27,44 @@
   --button-input-grey-hover: #EBEBEB;
   --button-input-grey-focus: #E5E5E5;
 
+  --link-hover: #81B3D2;
+  --link-active: #766357;
+  --link-on-link: #766357 ;
+
+  --body-shadow: rgba(0, 1, 1, 0.2);
+
   --text-main: "PT Sans", "Arial", sans-serif;
 }
 
 .page {
   background-color: var(--basic-background);
+
 }
 
 .page-body {
   width: 1200px;
   margin: 0px auto;
+  padding: 0;
   background-color: var(--basic-white);
-  box-shadow: 0px 5px 15px;
+  box-shadow: 0px 5px 15px var(--body-shadow);
 }
 
 a {
   text-decoration: none;
 }
 
-.hidden-header {
-  display: none;
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  flex-direction: column;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
 }
 
 .main-logo {
@@ -55,10 +74,10 @@ a {
 
 .site-navigation-list {
   display: flex;
-  width: 1050px;
   justify-content: space-between;
   list-style: none;
   text-decoration: none;
+  padding: 14px 73px 16px 73px;
 }
 
 .site-navigation-link {
@@ -71,12 +90,23 @@ a {
   color: var(--basic-black);
 }
 
+.site-navigation-link:hover,
+.site-navigation-link:focus {
+  color: var(--link-hover);
+}
+
+.site-navigation-link:active {
+  color: var(--link-active);
+  opacity: 0.3;
+}
+
+
 .header-logo {
   display: flex;
   justify-content: center;
-  background: url("/img/background_photo.jpg") no-repeat;
+  background: url("../img/background_photo.jpg") no-repeat;
   width: 1200px;
-  height: 509px;
+  height: 100%;
   padding-top: 77px;
 }
 
@@ -166,7 +196,7 @@ a {
 .search-link {
   display: block;
   width: 568px;
-  height: 86px;
+  padding: 30px;
   font-family: var(--text-main);
   font-style: normal;
   font-weight: 700;
@@ -175,6 +205,17 @@ a {
   text-transform: uppercase;
   color: var(--basic-white);
   background-color: var(--button-brown);
+  text-align: center;
+}
+
+.search-link:hover,
+.search-link:focus {
+  background-color: var(--button-brown-hover);
+}
+
+.search-link:active {
+  color: var(--basic-white-03);
+  background-color: var(--button-brown-active);
 }
 
 
@@ -230,6 +271,7 @@ a {
   border: 0;
   background: url("/img/calendar.png") no-repeat;
   background-position: center;
+  cursor: pointer;
 }
 
 .calendar-button:hover {
@@ -283,7 +325,7 @@ a {
 .search-button {
   border: 0;
   width: 458px;
-  height: 58px;
+  padding: 16px;
   font-family: var(--text-main);
   font-style: normal;
   font-weight: 700;
@@ -292,6 +334,7 @@ a {
   text-transform: uppercase;
   color: var(--basic-white);
   background-color: var(--button-blue);
+  text-align: center;
 }
 
 .search-button:hover,
@@ -300,11 +343,8 @@ a {
 }
 
 .search-button:active {
+  color: var(--basic-white-03);
   background-color: var(--button-blue-active);
-}
-
-.search-button span:active {
-  opacity: 0.3;
 }
 
 .map-wrapper {
@@ -314,6 +354,8 @@ a {
 .main-footer {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 18px 138px 36px 111px ;
 }
 
 .footer-contacts {
@@ -324,6 +366,9 @@ a {
   line-height: 26px;
   text-transform: uppercase;
   color: var(--basic-black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-contacts-phone {
@@ -333,9 +378,10 @@ a {
 .socials {
   display: flex;
   justify-content: space-between;
-  width: 150px;
   align-items: center;
   list-style: none;
+  margin: 0;
+  padding: 0;
 
 }
 
@@ -390,6 +436,11 @@ a {
   opacity: 0.3;
 }
 
+.footer-copyright {
+  display: flex;
+  align-items: center;
+}
+
 .footer-copyright span {
   font-family: var(--text-main);
   font-style: normal;
@@ -397,10 +448,10 @@ a {
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
+  margin-right: 8px;
 }
 
 .copyright {
-  display: block;
   background-image: url("../img/logo-htmlacademy.svg");
   width: 115px;
   height: 41px;
@@ -418,10 +469,13 @@ a {
 /*Catalog*/
 
 .search-form-container {
+  display: flex;
+  flex-direction: row;
   background-image: url("../img/catalog-background.jpg");
   background-repeat: no-repeat;
   width: 1200px;
-  height: 217px;
+  height: 100%;
+  padding: 27px 72px;
 }
 
 .search-form-header {
@@ -433,7 +487,6 @@ a {
   text-transform: uppercase;
   color: var(--basic-white);
 }
-
 
 .search-form li {
   list-style: none;
