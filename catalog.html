@@ -69,63 +69,77 @@
         </div>
         <div class="search-form-price">
           <h3 class="search-form-header">Стоимость в сутки (Р):</h3>
-          <input class="search-form-price input" type="text" placeholder="от 0" name="min-price">
-          <input class="search-form-price input" type="text" placeholder="до 3000" name="max-price">
-          <button class="show-button" type="submit" name="Show">Показать</button>
+          <label>
+            от
+            <input type="text" placeholder="0" name="min-price">
+          </label>
+          <label>
+            до
+            <input type="text" placeholder="3000" name="max-price">
+          </label>
+          <button type="submit">Показать</button>
         </div>
       </form>
     </section>
 
-    <section class="search-result-container">
-      <div class="search-sorting">
+    <section>
+      <div class="search-result">
         <h2 class="visually-hidden">Результат поиска</h2>
-        <span class="search-result">Найдено: 3</span>
-        <h3 class="search-result_sorting">Сортировка:</h3>
-        <ul class="sort_by">
-          <li><a class="sort_by type" href="blank.html">По цене</a></li>
-          <li><a class="sort_by type" href="blank.html">По типу</a></li>
-          <li><a class="sort_by type" href="blank.html">По рейтингу</ass=>
-          </li>
-        </ul>
-        <ul class="sort_by">
-          <li><a class="sort_by ascending" href="blank.html">По возрастанию</a></li>
-          <li><a class="sort_by descending" href="blank.html">По убыванию</a></li>
-        </ul>
+        <div>
+          <span>Найдено: 3</span>
+          <h3>Сортировка:</h3>
+          <ul>
+            <li><a href="blank.html">По цене</a></li>
+            <li><a href="blank.html">По типу</a></li>
+            <li><a href="blank.html">По рейтингу</a></li>
+          </ul>
+          <ul>
+            <li><a href="blank.html">По убыванию</a></li>
+            <li><a href="blank.html">По возрастанию</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="result_list">
-        <ul>
-          <li>
-            <img src="/img/hotel1.jpg" width="135" height="90" alt="гостиница Resort & Spa">
-            <h3><a class="result housing-name" href="blank.html">Resort & Spa</a></h3>
-            <span class="result housing-type">Гостиница</span>
-            <span class="result price">от 3000 р.</span>
-            <a class="result button_about" href="blank.html">Подробнее</a>
-            <a class="result button_reserve" href="blank.html">Забронировать</a>
-            <span class="result rate">Рейтинг: 8,5</span>
-            <span class="result stars four">Stars</span>
-          </li>
-          <li>
-            <img src="/img/motel1.jpg" width="135" height="90" alt="мотель Quail Inn">
-            <h3><a class="result housing-name" href="blank.html">Quail Inn</a></h3>
-            <span class="result housing-type">Мотель</span>
-            <span class="result price">от 3000 р.</span>
-            <a class="result button_about" href="blank.html">Подробнее</a>
-            <a class="result button_reserve" href="blank.html">Забронировать</a>
-            <span class="result rate">Рейтинг: 8,9</span>
-            <span class="result stars three">Stars</span>
-          </li>
-          <li>
-            <img src="/img/apartment1.jpg" width="135" height="90" alt="Апартаменты at Poco Diablo">
-            <h3><a class="result housing-name" href="blank.html">at Poco Diablo</a></h3>
-            <span class="result housing-type">Апартаменты</span>
-            <span class="result price">от 2000 р.</span>
-            <a class="result button_about" href="blank.html">Подробнее</a>
-            <a class="result button_reserve" href="blank.html">Забронировать</a>
-            <span class="result rate">Рейтинг: 9,2 </span>
-            <span class="result stars two">Stars</span>
-          </li>
-        </ul>
-      </div>
+
+      <ul>
+        <li>
+          <img src="/img/hotel1.jpg" width="135" height="90" alt="гостиница Resort & Spa">
+          <h3>
+            <a href="blank.html">Resort & Spa</a>
+          </h3>
+          <span>Гостиница</span>
+          <span>от 3000 р.</span>
+          <a href="blank.html">Подробнее</a>
+          <a href="blank.html">Забронировать</a>
+          <span>Рейтинг: 8,5</span>
+          <span>Stars</span>
+        </li>
+
+        <li>
+          <img src="/img/motel1.jpg" width="135" height="90" alt="мотель Quail Inn">
+          <h3>
+            <a href="blank.html">Quail Inn</a>
+          </h3>
+          <span>Мотель</span>
+          <span>от 3000 р.</span>
+          <a href="blank.html">Подробнее</a>
+          <a href="blank.html">Забронировать</a>
+          <span>Рейтинг: 8,9</span>
+          <span>Stars</span>
+        </li>
+
+        <li>
+          <img src="/img/apartment1.jpg" width="135" height="90" alt="Апартаменты at Poco Diablo">
+          <h3>
+            <a href="blank.html">at Poco Diablo</a>
+          </h3>
+          <span>Апартаменты</span>
+          <span>от 2000 р.</span>
+          <a href="blank.html">Подробнее</a>
+          <a href="blank.html">Забронировать</a>
+          <span>Рейтинг: 9,2 </span>
+          <span>Stars</span>
+        </li>
+      </ul>
     </section>
   </main>
 
