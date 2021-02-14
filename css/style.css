@@ -73,11 +73,12 @@ img {
 }
 
 .site-navigation-list {
+  margin-top: -70px;
   display: flex;
   justify-content: space-between;
   list-style: none;
   text-decoration: none;
-  padding: 14px 73px 16px 73px;
+  padding: 14px 73px;
 }
 
 .site-navigation-link {
@@ -102,12 +103,15 @@ img {
 
 
 .header-logo {
+  margin-top: -15px;
   display: flex;
   justify-content: center;
   background: url("../img/background_photo.jpg") no-repeat;
   width: 1200px;
   height: 100%;
+  align-items: center;
   padding-top: 77px;
+  padding-bottom: 81px;
 }
 
 /*Преимущества*/
@@ -217,7 +221,6 @@ img {
   color: var(--basic-white-03);
   background-color: var(--button-brown-active);
 }
-
 
 /*Выпадающий список*/
 
@@ -469,13 +472,9 @@ img {
 /*Catalog*/
 
 .search-form-container {
-  display: flex;
-  flex-direction: row;
   background-image: url("../img/catalog-background.jpg");
   background-repeat: no-repeat;
   width: 1200px;
-  height: 100%;
-  padding: 27px 72px;
 }
 
 .search-form-header {
@@ -501,5 +500,275 @@ img {
   text-transform: uppercase;
   color: var(--basic-white);
 }
+
+.search-form-price input {
+  font-family: var(--text-main);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+
+.search-form-price input::placeholder {
+  color: var(--basic-white);
+  opacity: 1;
+}
+
+.show-button {
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 2px;
+  width: 137px;
+  padding: 8px;
+  font-family: var(--text-main);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  text-align: center;
+  background-color: none;
+}
+
+.show-button:hover,
+.show-button:focus,
+.show-button:active {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
 /*Результаты поиска*/
 
+.search-result {
+  font-family: var(--text-main);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.search-result_sorting {
+  align-items: center;
+  font-family: var(--text-main);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+/*Сортировка*/
+
+.sort_by {
+  list-style: none;
+}
+
+.type {
+  font-family:var(--text-main);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+  opacity: 0.3;
+  text-decoration: underline 1px dashed var( --basic-blue);
+}
+
+.type:hover,
+.type:focus {
+  color: var(--basic-blue);
+  opacity: 1;
+}
+.type:active {
+  color: var(--basic-black);
+  opacity: 1;
+  text-decoration: none;
+}
+
+/*Стрелки*/
+
+.ascending {
+  font: 0/0;
+  text-shadow: none;
+  color: transparent;
+  background: url("../img/icon-up.png") no-repeat;
+  width: 11px;
+  height: 10px;
+}
+
+.ascending:hover,
+.ascending:focus {
+  background: url("../img/icon-up_hover.png")  no-repeat;
+
+}
+
+.ascending:active {
+  background: url("../img/icon-up_active.png")  no-repeat;
+}
+
+.descending {
+  font: 0/0;
+  text-shadow: none;
+  color: transparent;
+  background: url("../img/icon-down.png") no-repeat;
+  width: 11px;
+  height: 10px;
+}
+
+.descending:hover,
+.descending:focus {
+  background: url("../img/icon-down_hover.png")  no-repeat;
+
+}
+
+.descending:active {
+  background: url("../img/icon-down_active.png")  no-repeat;
+}
+
+
+.result_list li {
+  list-style: none;
+}
+
+.housing-name {
+  font-family: var(--text-main);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.housing-name:hover,
+.housing-name:hover {
+  color: var(--basic-blue);
+}
+
+.housing-name:active {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.housing-type {
+  font-family: var(--text-main);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: var(--basic-extra-dark);
+}
+
+.price {
+  font-family: var(--text-main);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: var(--basic-extra-dark);
+}
+
+.button_about {
+  border: 0;
+  padding: 3px 17px;
+  font-family: var(--text-main);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  align-items: center;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: var(--button-blue);
+}
+
+.button_about:hover,
+.button_about:focus {
+  background-color: var(--button-blue-hover);
+}
+
+.button_about:active {
+  color: var(--basic-white-03);
+  background-color: var(--button-blue-active);
+}
+
+.button_reserve {
+  border: 0;
+  padding: 3px 17px;
+  font-family: var(--text-main);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: var(--button-brown);
+}
+.button_reserve:hover,
+.button_reserve:focus {
+  background-color: var(--button-brown-hover);
+}
+
+.button_reserve:active {
+  color: var(--basic-white-03);
+  background-color: var(--button-brown-active);
+}
+
+.rate {
+  display: block;
+  border: 0;
+  width: 110px;
+  padding: 3px;
+  font-family: var(--text-main);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--basic-dark);
+  background-color: var(--basic-background);
+}
+
+.stars {
+  display: block;
+  font: 0/0;
+  padding: 4px;
+  text-shadow: none;
+  color: transparent;
+  background: url("../img/star.png") no-repeat;
+  align-items: center;
+  width: 19px;
+  height: 17px;
+}
+
+.four {
+  display: block;
+  width: 68px;
+  background: url("../img/star.png");
+  background-repeat: repeat-x;
+}
+
+.three {
+  display: block;
+  width: 48px;
+  background: url("../img/star.png");
+  background-repeat: repeat-x;
+}
+
+.two {
+  display: block;
+  width: 28px;
+  background: url("../img/star.png");
+  background-repeat: repeat-x;
+}
