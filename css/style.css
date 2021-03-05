@@ -36,9 +36,18 @@
   --text-main: "PT Sans", "Arial", sans-serif;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+}
+
 .page {
   background-color: var(--basic-background);
-
 }
 
 .page-body {
@@ -68,17 +77,43 @@ img {
 }
 
 .main-logo {
+  width: 138px;
+  height: 70px;
   display: flex;
-  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.site-navigation-list {
-  margin-top: -70px;
+.site-navigation {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   list-style: none;
   text-decoration: none;
   padding: 14px 73px;
+  margin: 0px;
+}
+
+.site-navigation li {
+  width: 25%;
+}
+
+.site-navigation li:nth-child(4n + 1) {
+
+}
+
+.site-navigation li:nth-child(4n + 2) {
+  text-align: left;
+  padding-right: 40px;
+}
+
+.site-navigation li:nth-child(4n + 3) {
+  padding-left: 40px;
+  text-align: right;
+}
+
+.site-navigation li:nth-child(4n + 4) {
+  text-align: right;
 }
 
 .site-navigation-link {
@@ -101,26 +136,51 @@ img {
   opacity: 0.3;
 }
 
-
 .header-logo {
-  margin-top: -15px;
-  display: flex;
-  justify-content: center;
+  display: block;
+  text-align: center;
   background: url("../img/background_photo.jpg") no-repeat;
   width: 1200px;
   height: 100%;
-  align-items: center;
   padding-top: 77px;
   padding-bottom: 81px;
 }
+
+.header-logo:after {
+  position: relative;
+  content: url("../img/Shape.png");
+  width: 1200px;
+  height: 157px;
+  bottom: -20px;
+}
+
+
 
 /*Преимущества*/
 
 .features-list {
   list-style: none;
+  margin: 0px;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+}
+
+.features-list li {
+  padding: 160px 73px 82px 73px;
+}
+
+.features-list--grey {
+  background-color: var(--block-grey);
+}
+
+.features-list--grey li {
+  padding: 47px 73px 54px 73px;
 }
 
 .features-header {
+  text-align: center;
   font-family: var(--text-main);
   font-style: normal;
   font-weight: 700;
@@ -128,9 +188,12 @@ img {
   font-size: 21px;
   line-height: 26px;
   color: var(--basic-black);
+  width: 470px;
+  margin: 43px auto 0 auto;
 }
 
 .features-desc {
+  text-align: center;
   font-family: var(--text-main);
   font-style: normal;
   font-weight: 400;
@@ -138,11 +201,18 @@ img {
   text-transform: uppercase;
   line-height: 26px;
   color: var(--basic-extra-dark);
+  margin: 44px auto 52px auto;
 }
 
 .features-item {
+  display: flex;
+}
+
+.features-item-content {
+  text-align: center;
   color: var(--basic-white);
   background-color: var(--basic-blue);
+  padding: 50px;
 }
 
 .item-header {
@@ -152,6 +222,42 @@ img {
   font-size: 21px;
   line-height: 21px;
   text-transform: uppercase;
+}
+
+.souvenirs {
+  position: relative;
+}
+
+.souvenirs:before {
+  content: url(../img/icon-2.svg);
+  position: absolute;
+  bottom: 49px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.home {
+  position: relative;
+}
+
+.home:before {
+  content: url(../img/icon-1.svg);
+  position: absolute;
+  bottom: 49px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.burger {
+  position: relative;
+}
+
+.burger:before {
+  content: url(../img/icon-3.svg);
+  position: absolute;
+  bottom: 49px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .item-number {
@@ -172,22 +278,14 @@ img {
   text-transform: uppercase;
 }
 
-.features-list-wrapper {
-  background-color: var(--block-grey);
-}
-.features-list {
-  text-align: center;
-  display: grid;
-  grid-template-columns: 300px 300px 300px;
-}
-
-.features-list .item-content {
-  color: var(--basic-extra-dark);
-}
-
 /*Поиск гостиницы в Седоне*/
 
+.housing-search-block {
+  display: flex;
+  width: 568px;
+}
 .search-header {
+
   font-family: var(--text-main);
   font-style: normal;
   font-weight: 700;
@@ -197,8 +295,9 @@ img {
   color: var(--basic-black);
 }
 
+
 .search-link {
-  display: block;
+  display: flex;
   width: 568px;
   padding: 30px;
   font-family: var(--text-main);
@@ -385,7 +484,6 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
-
 }
 
 .socials-button {
