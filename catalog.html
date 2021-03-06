@@ -15,6 +15,7 @@
 
 <body class="page-body">
   <header class="main-header">
+<<<<<<< HEAD
     <a class="main-logo" href="index.html">
       <img src="/img/logo/logo.svg" width="138" height="70" alt="Логотип Седона">
     </a>
@@ -25,49 +26,61 @@
         <li><a class="site-navigation-link" href="blank.html">Карта</a></li>
         <li><a class="site-navigation-link" href="catalog.html">Гостиницы</a></li>
       </ul>
+=======
+    <nav class="main-navigation">
+      <a class="main-header-logo" href="#">
+        <img src="../img/logo/logo.svg" width="138" height="70" alt="Логотип Седона">
+      </a>
+      <div class="main-navigation-wrapper">
+        <ul class="site-navigation">
+          <li><a class="site-navigation-link" href="blank.html">Информация</a></li>
+          <li><a class="site-navigation-link" href="blank.html">Фото и видео</a></li>
+          <li><a class="site-navigation-link link" href="blank.html">Карта штата</a></li>
+          <li><a class="site-navigation-link link" href="catalog.html">Гостиницы</a></li>
+        </ul>
+      </div>
+>>>>>>> ee126459d42c6ac1aac11410aa04a13bff5f400e
     </nav>
   </header>
 
 
   <main>
-    <section class="search-form-container">
+    <section>
       <h2 class="visually-hidden">Форма поиска</h2>
-      <form action="https://echo.htmlacademy.ru/" method="POST">
+      <form class="search-form-container" action="https://echo.htmlacademy.ru/" method="POST">
         <div class="search-form">
           <h3 class="search-form-header">Инфраструктура:</h3>
-          <ul class="search-form-items">
-            <li>
-              <label for="pool">Бассейн</label>
-              <input id="pool" type="checkbox" checked>
-            </li>
-            <li>
-              <label for="parking">Парковка</label>
-              <input id="parking" type="checkbox">
-            </li>
-            <li>
-              <label for="wifi">wifi</label>
-              <input id="wifi" type="checkbox">
-            </li>
-          </ul>
+          <div class="search-form-item">
+            <input id="pool" type="checkbox" checked>
+            <label for="pool">Бассейн</label>
+          </div>
+          <div class="search-form-item">
+            <input id="parking" type="checkbox">
+            <label for="parking">Парковка</label>
+          </div>
+          <div class="search-form-item">
+            <input id="wifi" type="checkbox">
+            <label for="wifi">wifi</label>
+          </div>
         </div>
+
         <div class="search-form">
           <h3 class="search-form-header">Тип жилья:</h3>
-          <ul class="search-form-items">
-            <li>
-              <label for="hotel">Гостиница</label>
-              <input id="hotel" type="checkbox" checked>
-            </li>
-            <li>
-              <label for="motel">Мотель</label>
-              <input id="motel" type="checkbox" checked>
-            </li>
-            <li>
-              <label for="apartment">Апартаменты</label>
-              <input id="apartment" type="checkbox" checked>
-            </li>
-          </ul>
+          <div class="search-form-item">
+            <input id="hotel" type="checkbox" checked>
+            <label for="hotel">Гостиница</label>
+          </div>
+          <div class="search-form-item">
+            <input id="motel" type="checkbox" checked>
+            <label for="motel">Мотель</label>
+          </div>
+          <div class="search-form-item">
+            <input id="apartment" type="checkbox" checked>
+            <label for="apartment">Апартаменты</label>
+          </div>
         </div>
-        <div class="search-form-price">
+
+        <div class="search-form">
           <h3 class="search-form-header">Стоимость в сутки (Р):</h3>
           <input class="search-form-price input" type="text" placeholder="от 0" name="min-price">
           <input class="search-form-price input" type="text" placeholder="до 3000" name="max-price">
@@ -95,7 +108,7 @@
       <div class="result_list">
         <ul>
           <li>
-            <img src="/img/hotel1.jpg" width="135" height="90" alt="гостиница Resort & Spa">
+            <img src="../img/hotel1.jpg" width="135" height="90" alt="гостиница Resort & Spa">
             <h3><a class="result housing-name" href="blank.html">Resort & Spa</a></h3>
             <span class="result housing-type">Гостиница</span>
             <span class="result price">от 3000 р.</span>
@@ -105,7 +118,7 @@
             <span class="result stars four">Stars</span>
           </li>
           <li>
-            <img src="/img/motel1.jpg" width="135" height="90" alt="мотель Quail Inn">
+            <img src="../img/motel1.jpg" width="135" height="90" alt="мотель Quail Inn">
             <h3><a class="result housing-name" href="blank.html">Quail Inn</a></h3>
             <span class="result housing-type">Мотель</span>
             <span class="result price">от 3000 р.</span>
@@ -115,7 +128,7 @@
             <span class="result stars three">Stars</span>
           </li>
           <li>
-            <img src="/img/apartment1.jpg" width="135" height="90" alt="Апартаменты at Poco Diablo">
+            <img src="../img/apartment1.jpg" width="135" height="90" alt="Апартаменты at Poco Diablo">
             <h3><a class="result housing-name" href="blank.html">at Poco Diablo</a></h3>
             <span class="result housing-type">Апартаменты</span>
             <span class="result price">от 2000 р.</span>
