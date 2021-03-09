@@ -98,10 +98,6 @@ img {
   width: 25%;
 }
 
-.site-navigation li:nth-child(4n + 1) {
-
-}
-
 .site-navigation li:nth-child(4n + 2) {
   text-align: left;
   padding-right: 40px;
@@ -146,14 +142,6 @@ img {
   padding-bottom: 81px;
 }
 
-.header-logo:after {
-  position: relative;
-  content: url("../img/Shape.png");
-  width: 1200px;
-  height: 157px;
-  bottom: -20px;
-}
-
 /*Преимущества*/
 
 .features-list {
@@ -188,6 +176,17 @@ img {
   color: var(--basic-black);
   width: 470px;
   margin: 43px auto 0 auto;
+}
+
+.features-header:before {
+  display: flex;
+  position: relative;
+  content: url("../img/Shape.png");
+  width: 1200px;
+  height: 57px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -103px;
 }
 
 .features-desc {
@@ -246,11 +245,11 @@ img {
   transform: translateX(-50%);
 }
 
-.burger {
+.food {
   position: relative;
 }
 
-.burger:before {
+.food:before {
   content: url(../img/icon-3.svg);
   position: absolute;
   bottom: 49px;
@@ -276,34 +275,55 @@ img {
   text-transform: uppercase;
 }
 
-
-
 /*Поиск гостиницы в Седоне*/
 
-.search-header {
-  font-family: var(--text-main);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 24px;
-  text-transform: uppercase;
-  color: var(--basic-black);
-}
+  .housing-search {
+    margin: auto;
+    width: 568px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 58px;
+  }
 
-.search-link {
-  display: block;
-  width: 568px;
-  padding: 30px;
-  font-family: var(--text-main);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 26px;
-  text-transform: uppercase;
-  color: var(--basic-white);
-  background-color: var(--button-brown);
-  text-align: center;
-}
+  .search-header {
+    display: block;
+    font-family: var(--text-main);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: var(--basic-black);
+  }
+
+  .search-dates {
+    width: 435px;
+    font-family: var(--text-main);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: var(--basic-extra-dark);
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .search-link {
+    width: 568px;
+    padding : 30px 0 30px 0;
+    font-family: var(--text-main);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: var(--basic-white);
+    background-color: var(--button-brown);
+    text-align: center;
+  }
 
 .search-link:hover,
 .search-link:focus {
@@ -314,7 +334,6 @@ img {
   color: var(--basic-white-03);
   background-color: var(--button-brown-active);
 }
-
 /*Выпадающий список*/
 
 .search-dates {
@@ -564,9 +583,54 @@ img {
 /*Catalog*/
 
 .search-form-container {
+  margin: auto;
+  display: grid;
+  padding: 26px 73px 32px 73px;
+  grid-template-columns: 1fr 1fr 2fr;
   background-image: url("../img/catalog-background.jpg");
   background-repeat: no-repeat;
-  width: 1200px;
+}
+
+.search-form {
+  font-family: var(--text-main);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+
+.search-form:nth-child(3n + 3) {
+  padding-left: 150px;
+}
+
+.search-form-input:checked,
+.search-form-input:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+.search-form-input:checked + label,
+.search-form-input:not(:checked) + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 38px;
+  cursor: pointer;
+}
+
+.search-form-input:not(:checked) + label:before {
+  content: url(../img/checkbox-off.png);
+  position: absolute;
+  left: 2px;
+  top: -2px;
+}
+
+.search-form-input:checked + label:after {
+  content: url(../img/checkbox-on.png);
+  position: absolute;
+  left: 2px;
+  top: -2px;
 }
 
 .search-form-header {
@@ -577,33 +641,34 @@ img {
   line-height: 21px;
   text-transform: uppercase;
   color: var(--basic-white);
+  margin: 0px;
+  padding-bottom: 24px;
 }
 
 .search-form li {
   list-style: none;
 }
 
-.search-form-items {
-  font-family: var(--text-main);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
-  color: var(--basic-white);
+.search-form-item {
+  margin-bottom: 22px;
 }
 
-.search-form-price input {
-  font-family: var(--text-main);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
-  color: var(--basic-white);
+.search-form-price {
+  display: flex;
 }
 
-.search-form-price input::placeholder {
+.input_price {
+  font-family: var(--text-main);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background: none;
+}
+
+.input_price::placeholder {
   color: var(--basic-white);
   opacity: 1;
 }
@@ -632,20 +697,32 @@ img {
   background-color: var(--basic-white);
 }
 
-/*Результаты поиска*/
 
-.search-result {
+/*Сортировка*/
+
+.search-sorting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 29px 73px 62px 73px;
+}
+
+.found {
+  margin: 0;
+  padding: 0;
   font-family: var(--text-main);
   font-style: normal;
   font-weight: 700;
   font-size: 21px;
-  line-height: 26px;
+  line-height: 28px;
   text-transform: uppercase;
   color: var(--basic-black);
+  padding-right: 43px;
 }
 
-.search-result_sorting {
-  align-items: center;
+.sorting {
+  margin: 0;
+  padding: 0;
   font-family: var(--text-main);
   font-style: normal;
   font-weight: 400;
@@ -655,10 +732,10 @@ img {
   color: var(--basic-black);
 }
 
-/*Сортировка*/
-
-.sort_by {
+.sort_by li {
+  display: inline;
   list-style: none;
+  padding-right: 30px;
 }
 
 .type {
@@ -686,6 +763,30 @@ img {
 
 /*Стрелки*/
 
+.arrange_by {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+}
+
+.arrange-button {
+  display: block;
+  width: 11px;
+  height: 10px;
+  margin-left: 12px;
+}
+
+.arrange-button::before {
+  content: "";
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .ascending {
   font: 0/0;
   text-shadow: none;
@@ -698,11 +799,14 @@ img {
 .ascending:hover,
 .ascending:focus {
   background: url("../img/icon-up_hover.png")  no-repeat;
-
+  width: 11px;
+  height: 10px;
 }
 
 .ascending:active {
   background: url("../img/icon-up_active.png")  no-repeat;
+  width: 11px;
+  height: 10px;
 }
 
 .descending {
@@ -717,11 +821,14 @@ img {
 .descending:hover,
 .descending:focus {
   background: url("../img/icon-down_hover.png")  no-repeat;
-
+  width: 11px;
+  height: 10px;
 }
 
 .descending:active {
   background: url("../img/icon-down_active.png")  no-repeat;
+  width: 11px;
+  height: 10px;
 }
 
 /*Результаты поиска*/
@@ -836,32 +943,30 @@ img {
 .stars {
   display: block;
   font: 0/0;
-  padding: 4px;
+  padding: px;
   text-shadow: none;
   color: transparent;
   background: url("../img/star.png") no-repeat;
   align-items: center;
-  width: 19px;
-  height: 17px;
 }
 
 .four {
   display: block;
-  width: 68px;
+  width: 78px;
   background: url("../img/star.png");
   background-repeat: repeat-x;
 }
 
 .three {
   display: block;
-  width: 48px;
+  width: 58px;
   background: url("../img/star.png");
   background-repeat: repeat-x;
 }
 
 .two {
   display: block;
-  width: 28px;
+  width: 38px;
   background: url("../img/star.png");
   background-repeat: repeat-x;
 }

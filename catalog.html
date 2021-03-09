@@ -14,20 +14,19 @@
 </head>
 
 <body class="page-body">
-  <header class="main-header">
+  <header>
     <a class="main-logo" href="index.html">
       <img src="/img/logo/logo.svg" width="138" height="70" alt="Логотип Седона">
     </a>
-    <nav class="site-navigation">
-      <ul class="site-navigation-list">
+    <nav>
+      <ul class="site-navigation">
         <li><a class="site-navigation-link" href="blank.html">Информация</a></li>
         <li><a class="site-navigation-link" href="blank.html">Фото и видео</a></li>
-        <li><a class="site-navigation-link" href="blank.html">Карта</a></li>
+        <li><a class="site-navigation-link" href="blank.html">Карта штата</a></li>
         <li><a class="site-navigation-link" href="catalog.html">Гостиницы</a></li>
       </ul>
     </nav>
   </header>
-
 
   <main>
     <section>
@@ -36,60 +35,60 @@
         <div class="search-form">
           <h3 class="search-form-header">Инфраструктура:</h3>
           <div class="search-form-item">
-            <input id="pool" type="checkbox" checked>
+            <input class="search-form-input" id="pool" type="checkbox" checked>
             <label for="pool">Бассейн</label>
           </div>
           <div class="search-form-item">
-            <input id="parking" type="checkbox">
+            <input class="search-form-input" id="parking" type="checkbox">
             <label for="parking">Парковка</label>
           </div>
           <div class="search-form-item">
-            <input id="wifi" type="checkbox">
+            <input class="search-form-input" id="wifi" type="checkbox">
             <label for="wifi">wifi</label>
           </div>
         </div>
-
         <div class="search-form">
           <h3 class="search-form-header">Тип жилья:</h3>
           <div class="search-form-item">
-            <input id="hotel" type="checkbox" checked>
+            <input class="search-form-input" id="hotel" type="checkbox" checked>
             <label for="hotel">Гостиница</label>
           </div>
           <div class="search-form-item">
-            <input id="motel" type="checkbox" checked>
+            <input class="search-form-input" id="motel" type="checkbox" checked>
             <label for="motel">Мотель</label>
           </div>
           <div class="search-form-item">
-            <input id="apartment" type="checkbox" checked>
+            <input class="search-form-input" id="apartment" type="checkbox" checked>
             <label for="apartment">Апартаменты</label>
           </div>
         </div>
-
         <div class="search-form">
           <h3 class="search-form-header">Стоимость в сутки (Р):</h3>
-          <input class="search-form-price input" type="text" placeholder="от 0" name="min-price">
-          <input class="search-form-price input" type="text" placeholder="до 3000" name="max-price">
+          <div class="search-form-price">
+            <input class="input_price" type="text" placeholder="от 0" name="min-price">
+            <input class="input_price" type="text" placeholder="до 3000" name="max-price">
+          </div>
           <button class="show-button" type="submit" name="Show">Показать</button>
         </div>
       </form>
     </section>
-
-    <section class="search-result-container">
+    <section>
       <div class="search-sorting">
         <h2 class="visually-hidden">Результат поиска</h2>
-        <span class="search-result">Найдено: 3</span>
-        <h3 class="search-result_sorting">Сортировка:</h3>
+        <h3 class="found">Найдено: 3</h3>
+        <span class="sorting">Сортировка:</span>
         <ul class="sort_by">
           <li><a class="sort_by type" href="blank.html">По цене</a></li>
           <li><a class="sort_by type" href="blank.html">По типу</a></li>
-          <li><a class="sort_by type" href="blank.html">По рейтингу</ass=>
-          </li>
+          <li><a class="sort_by type" href="blank.html">По рейтингу</a></li>
         </ul>
-        <ul class="sort_by">
-          <li><a class="sort_by ascending" href="blank.html">По возрастанию</a></li>
-          <li><a class="sort_by descending" href="blank.html">По убыванию</a></li>
+        <ul class="arrange_by">
+          <li><a class="arrange-button ascending" href="blank.html">По возрастанию</a></li>
+          <li><a class="arrange-button descending" href="blank.html">По убыванию</a></li>
         </ul>
       </div>
+    </section>
+    <section>
       <div class="result_list">
         <ul>
           <li>
